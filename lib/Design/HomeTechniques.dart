@@ -11,8 +11,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _index=0;
   final List<Widget> _barItems=[
-    HomeFinal(),
     DifferentAlgorithms(),
+    HomeFinal(),
   ];
   void _onTapBar(int index){
     setState(() {
@@ -32,11 +32,11 @@ class _HomeState extends State<Home> {
             new BottomNavigationBarItem(
               icon:new Icon(Icons.border_color),
               backgroundColor: Colors.deepPurple,
-              title: Text("Techniques"),
+              title: Text("Algorithms"),
             ),
             new BottomNavigationBarItem(
                 icon: new Icon(Icons.image,),
-                title: new Text("Algorithms"),
+                title: new Text("Techniques"),
                 backgroundColor: Colors.deepPurple
             ),
           ]),

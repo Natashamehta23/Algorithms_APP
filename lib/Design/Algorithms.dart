@@ -1,5 +1,5 @@
 import 'package:algo_f1/All_Algorithms/Sorting/BubbleSort.dart';
-import 'package:algo_f1/Routes/route.dart';
+import 'package:algo_f1/All_Algorithms/Sorting/constantAlgoNames.dart';
 import 'package:flutter/material.dart';
 
 class DifferentAlgorithms extends StatefulWidget {
@@ -8,43 +8,12 @@ class DifferentAlgorithms extends StatefulWidget {
 }
 
 class _DifferentAlgorithmsState extends State<DifferentAlgorithms> {
+
   final TextStyle dropdownMenuItem =
   TextStyle(color: Colors.black, fontSize: 18);
 
   final primary = Color(0xff696b9e);
   final secondary = Color(0xfff29a94);
-
-  final List<Map> AlgorithmsList = [
-    {
-      "name": "Searching",
-    },
-    {
-      "name": "Sorting",
-    },
-    {
-      "name": "String Matching",
-    },
-    {
-      "name": "Graph Algortihms",
-    },
-
-    {
-      "name": "Greedy ALgorithms",
-    },
-    {
-      "name": "Number Theory",
-    },
-    {
-      "name": "Patterns",
-    },
-    {
-      "name": "Dynamic Programming Algorithms",
-    },
-    {
-      "name": "Number Theory",
-    },
-
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -57,17 +26,18 @@ class _DifferentAlgorithmsState extends State<DifferentAlgorithms> {
           child: Stack(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.only(top: 145),
-                height: MediaQuery.of(context).size.height,
+                padding: EdgeInsets.only(top: 100),
+                height: MediaQuery.of(context).size.height-90.0,
                 width: double.infinity,
                 child: ListView.builder(
                     itemCount: AlgorithmsList.length,
                     itemBuilder: (BuildContext context, int index) {
                       return buildList(context, index);
+
                     }),
               ),
               Container(
-                height: 100,
+                height: 90,
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: Colors.indigo,
@@ -101,49 +71,27 @@ class _DifferentAlgorithmsState extends State<DifferentAlgorithms> {
                   ),
                 ),
               ),
-              Container(
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(
-                      height: 80,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: Material(
-                        elevation: 5.0,
-                        borderRadius: BorderRadius.all(Radius.circular(30)),
-                        child: TextField(
-                          // controller: TextEditingController(text: locations[0]),
-                          cursorColor: Theme.of(context).primaryColor,
-                          style: dropdownMenuItem,
-                          decoration: InputDecoration(
-                              hintText: "Search Algorithms",
-                              hintStyle: TextStyle(
-                                  color: Colors.black38, fontSize: 16),
-                              prefixIcon: Material(
-                                elevation: 0.0,
-                                borderRadius:
-                                BorderRadius.all(Radius.circular(30)),
-                                child: Icon(Icons.search),
-                              ),
-                              border: InputBorder.none,
-                              contentPadding: EdgeInsets.symmetric(
-                                  horizontal: 25, vertical: 13)),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              )
             ],
           ),
         ),
       ),
     );
   }
+  void _navigateToDetails(int index){
+
+  }
   Widget buildList(BuildContext context, int index) {
     return InkWell(
-      onTap: () => {},
+      onTap: () => {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (context){
+            return new BubbleSort();
+          }
+        )),
+//        _OnTapBar,
+//        _navigateToDetails
+      },
+      splashColor: Colors.blueGrey,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
@@ -188,3 +136,5 @@ class _DifferentAlgorithmsState extends State<DifferentAlgorithms> {
     );
   }
 }
+
+
