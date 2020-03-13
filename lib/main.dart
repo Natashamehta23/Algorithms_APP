@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Algorithms',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        //primaryColor: Colors.indigo,
       ),
       home: MyHomePage(),
       debugShowCheckedModeBanner: false,
