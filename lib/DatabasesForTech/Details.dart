@@ -19,40 +19,47 @@ class Divide extends StatefulWidget {
 class _DivideState extends State<Divide> {
 
   Widget _description(BuildContext context){
-    return new Container(
-      padding: const EdgeInsets.all(15.0),
-      child: ListView(
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                new Text(
-                  widget.techniques.name,
-                  style: new TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.black
-                  ),),
-                SizedBox(
-                  height: 10.0,
-                  width: 15.0,
-                ),
-                new Hero(tag: widget.avatar, child: new CircleAvatar(
-                  backgroundImage: new NetworkImage(widget.techniques.image_url),
-                  radius: 30.0,
-                )),
-              ],
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            new Text(
-              widget.techniques.data,
-              style: new TextStyle(
-                fontSize: 20.0,
-                color: Colors.black54,
-              ),)
-          ],
+    return SafeArea(
+      child: new Container(
+        alignment: Alignment.topCenter,
+        padding: const EdgeInsets.only(left: 10.0,right: 10.0),
+        child: ListView(
+            children: <Widget>[
+              Wrap(
+                  children: <Widget>[
+                    new RichText(
+                      text:TextSpan(
+                        text:                      widget.techniques.name,
+                        style: new TextStyle(
+                            fontSize: 50.0,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold
+                        ),
+                      )
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                      width: 15.0,
+                    ),
+//                  new Hero(tag: widget.avatar, child: new CircleAvatar(
+//                    backgroundImage: new NetworkImage(widget.techniques.image_url),
+//                    radius: 30.0,
+//                  )),
+                  ],
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              new Text(
+                widget.techniques.data,
+                style: new TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.black54,
+                ),)
+            ],
+          ),
         ),
-      );
+    );
   }
 
   @override

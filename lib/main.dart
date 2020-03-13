@@ -4,10 +4,10 @@ import 'Design/HomeTechniques.dart';
 
 void main(){
   runApp(MyApp());
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
+//  SystemChrome.setPreferredOrientations([
+//    DeviceOrientation.portraitUp,
+//    DeviceOrientation.portraitDown,
+//  ]);
 }
 
 class MyApp extends StatelessWidget {
@@ -28,8 +28,10 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: new Home(),
+    return SafeArea(
+      child: Scaffold(
+        body: new Home(),
+      ),
     );
   }
 }

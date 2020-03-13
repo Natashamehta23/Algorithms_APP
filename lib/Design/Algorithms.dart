@@ -28,11 +28,27 @@ class _DifferentAlgorithmsState extends State<DifferentAlgorithms> {
         ],
       ),
       body: new Container(
-        child: Center(
-          child: new Text("Algorithms",
-            style: new TextStyle(
-              fontSize: 20.0,
-            ),),
+        child: Align(
+          alignment: Alignment.center,
+          child: new Stack(
+            children: <Widget>[
+              new Container(
+                alignment: Alignment.center,
+                color: Colors.blueGrey,
+                height: double.infinity,
+                width: double.infinity,
+              ),
+              Align(
+                alignment: Alignment.topCenter,
+                child: new Container(
+                    alignment: Alignment.center,
+                    color: Colors.blue,
+                    height: 90.0,
+                    width: double.infinity,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

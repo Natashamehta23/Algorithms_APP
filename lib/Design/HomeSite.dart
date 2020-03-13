@@ -37,16 +37,26 @@ class _HomeFinalState extends State<HomeFinal> {
   }
 
   Widget _buildBody() {
+    Orientation orientation =MediaQuery.of(context).orientation;
     return Container(
       margin: const EdgeInsets.all(5.0),
-      child: new Column(
+      child: (orientation == Orientation.portrait)
+        ? Column(
         children: <Widget>[
           new Image(
             image: new AssetImage("assets/algopic.jpg"),
           ),
           _getListViewWidget(),
         ],
-      ),
+      )
+      : Row(
+        children: <Widget>[
+          new Image(
+            image: new AssetImage("assets/algopic.jpg"),
+          ),
+          _getListViewWidget(),
+        ],
+    ),
     );
   }
 
