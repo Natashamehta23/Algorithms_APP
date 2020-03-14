@@ -29,7 +29,7 @@ class _DivideState extends State<Divide> {
                   children: <Widget>[
                     new RichText(
                       text:TextSpan(
-                        text:                      widget.techniques.name,
+                        text: widget.techniques.name,
                         style: new TextStyle(
                             fontSize: 50.0,
                             color: Colors.black,

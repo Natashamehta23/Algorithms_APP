@@ -44,6 +44,17 @@ flutter:
   assets:
     - assets/algopic.jpg
     - assets/tech.json
+    - assets/insertionsort.png
+    - assets/QuickSort.png
+    - assets/mergesort.JPG
+    - assets/mergeAlgo.JPG
+    - assets/LinearSearch.png
+    - assets/BinarySearch.png
+    - assets/floyd.JPG
+    - assets/kruskal.png
+    - assets/prim.png
+    - assets/dijkstra.jpg
+    - assets/bellman.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

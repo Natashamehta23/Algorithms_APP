@@ -1,4 +1,7 @@
-import 'package:algo_f1/All_Algorithms/Sorting/BubbleSort.dart';
+import 'package:algo_f1/All_Algorithms/Graph/Graph.dart';
+import 'package:algo_f1/All_Algorithms/Searching/Searching.dart';
+import 'package:algo_f1/All_Algorithms/Sorting/Sorting.dart';
+import 'package:algo_f1/All_Algorithms/StringMatching/StringMatching.dart';
 import 'package:flutter/material.dart';
 
 import 'TilesDesign.dart';
@@ -28,16 +31,16 @@ class _DifferentAlgorithmsState extends State<DifferentAlgorithms> {
               child: ListView(
                 children: <Widget>[
                   Tiles(value: MaterialPageRoute(builder: (context){
-                    return Sorting();
+                    return Searching();
                   }), name: 'Searching Algortihms',),
                   Tiles(value: MaterialPageRoute(builder: (context){
                     return Sorting();
                   }), name: 'Sorting Algorithms',),
                   Tiles(value: MaterialPageRoute(builder: (context){
-                    return Sorting();
+                    return StringMatch();
                   }), name: 'String Matching Algortihms',),
                   Tiles(value: MaterialPageRoute(builder: (context){
-                    return Sorting();
+                    return Graph();
                   }), name: 'Graph Algortihms',),
                   Tiles(value: MaterialPageRoute(builder: (context){
                     return Sorting();
@@ -45,18 +48,10 @@ class _DifferentAlgorithmsState extends State<DifferentAlgorithms> {
                   Tiles(value:  MaterialPageRoute(builder: (context){
                     return Sorting();
                   }), name: 'Greedy Algorithms',),
-                  Tiles(value:  MaterialPageRoute(builder: (context){
-                    return Sorting();
-                  }), name: 'Branch and Bound Algorithms',),
-                  Tiles(value:  MaterialPageRoute(builder: (context){
-                    return Sorting();
-                  }), name: 'Backtracking Algortihms',),
+
                   Tiles(value:  MaterialPageRoute(builder: (context){
                     return Sorting();
                   }), name: 'Numer Theory',),
-                  Tiles(value:  MaterialPageRoute(builder: (context){
-                    return Sorting();
-                  }), name: 'Patterns',),
                   Tiles(value:  MaterialPageRoute(builder: (context){
                     return Sorting();
                   }), name: 'Bit Algortihms',),
